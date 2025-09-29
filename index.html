@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Snowman con A-Frame</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Cámara -->
+      <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+      <!-- Suelo -->
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#d2fcfa"></a-plane>
+
+      <!-- Fondo (plano vertical atrás) -->
+      <a-plane position="0 2 -6" rotation="0 0 0" width="15" height="8" color="#d2fcfa"></a-plane>
+
+      <!-- Luces -->
+      <a-entity light="type: ambient; color: #888"></a-entity>
+      <a-entity light="type: directional; intensity: 0.8" position="2 4 2"></a-entity>
+
+      <!-- Cuerpo -->
+      <a-sphere position="0 0.6 -3" radius="0.7" color="#ffffff"></a-sphere> <!-- Bolita G  -->
+      <a-sphere position="0 1.6 -3" radius="0.5" color="#ffffff"></a-sphere> <!-- Bolita M -->
+
+      <!-- Bufanda -->
+      <a-cylinder position="0 1.2 -3" radius="0.4" height="0.4" color="#e884e0"> </a-cylinder> 
+      <a-box position="-0.25 1.05 -2.3" depth="0.01" height="0.6" width="0.13" color="#e884e0"></a-box> 
+
+      <!-- Ojos -->
+      <a-sphere position="-0.12 1.64 -2.5" radius="0.06" color="#000000"></a-sphere>
+      <a-sphere position="0.12 1.64 -2.5" radius="0.06" color="#000000"></a-sphere> 
+
+      <!-- Nariz -->
+      <a-cone position="0 1.5 -2.4" radius-bottom="0.06" radius-top="0" height="0.3" color="#FF8C00" rotation="90 0 0"> </a-cone> 
+    
+      <!-- Botones -->
+      <a-sphere position="0 1.23 -1.95" radius="0.035" color="#000000"></a-sphere>
+      <a-sphere position="0 1.05 -1.95" radius="0.035" color="#000000"></a-sphere>
+      <a-sphere position="0 0.85 -1.95" radius="0.035" color="#000000"></a-sphere>
+
+      <!-- Sombrero -->
+       <a-cylinder position="0 2 -3"  radius="0.45"  height="0.1"  color="#000000"> </a-cylinder> 
+       <a-cylinder position="0 2.15 -3" radius="0.248"  height="0.6"  color="#000000"> </a-cylinder>
+       <a-cylinder position="0 2.1 -3" radius="0.25" height="0.1" color="#e884e0"> </a-cylinder>
+
+      <!-- Brazos --> 
+      <a-cylinder position="-0.55 1.1 -2.8" rotation="0 0 45" radius="0.03" height="0.8" color="#8B4513"></a-cylinder>
+      <a-cylinder position="0.55 1.1 -2.8" rotation="0 0 -45" radius="0.03" height="0.8" color="#8B4513"></a-cylinder>
+
+      <!-- Guantes --> 
+      <a-sphere position="-0.9 1.4 -2.9" radius="0.07" color="#e884e0"></a-sphere>
+      <a-sphere position="0.9 1.4 -2.9" radius="0.07" color="#e884e0"></a-sphere>
+
+
+      <!-- Copos --> 
+      <a-sphere position="-2 4 -5" radius="0.05" color="##dff6f7" animation="property: position; to: -2 0 -5; dur: 5000; loop: true"></a-sphere>
+      <a-sphere position="1 3 -4" radius="0.05" color="##dff6f7" animation="property: position; to: 1 0 -4; dur: 4000; loop: true"></a-sphere>
+      <a-sphere position="0 5 -3" radius="0.05" color="##dff6f7" animation="property: position; to: 0 0 -3; dur: 6000; loop: true"></a-sphere>
+
+      <!-- Regalos --> 
+      <a-box position="-1.5 0.25 -3" depth="0.5" height="0.5" width="0.5" color="#b7f7b2"></a-box>
+      <a-box position="-1.5 0.55 -3" depth="0.52" height="0.1" width="0.52" color="#d2b2f7"></a-box>
+
+      <a-box position="1.5 0.25 -3" depth="0.4" height="0.4" width="0.4" color="#fffd78"></a-box>
+      <a-box position="1.5 0.45 -3" depth="0.42" height="0.08" width="0.42" color="#d2b2f7"></a-box>
+
+    </a-scene>
+  </body>
+</html>
